@@ -24,17 +24,32 @@ class VmList extends PureComponent {
 
     return (
       <div className="vm-list">
-        {snapshots.length
-          ? snapshots.map((vm, idx) => (
-              <VmItem
-                key={vm.id}
-                vmInfo={vm}
-                selectVm={selectVm}
-                isSelected={selectedItem === idx}
-                switchPage={switchPage}
-              />
-            ))
-          : 'Виртуальных машин не найдено'}
+        {snapshots.length ? (
+          snapshots.map((vm, idx) => (
+            <VmItem
+              key={vm.id}
+              vmInfo={vm}
+              selectVm={selectVm}
+              isSelected={selectedItem === idx}
+              switchPage={switchPage}
+            />
+          ))
+        ) : (
+          <p>Виртуальных машин не найдено</p>
+        )}
+
+        {/* language=SCSS */}
+        <style jsx>
+          {`
+            .vm-list {
+              max-height: 60%;
+              overflow: hidden;
+              overflow-y: scroll;
+              margin-bottom: 20px;
+              padding-right: 10px;
+            }
+          `}
+        </style>
       </div>
     );
   }

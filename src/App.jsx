@@ -2,6 +2,8 @@ import React, { PureComponent } from 'react';
 
 // components
 import TabsList from './components/TabsList';
+import Loader from './components/Loader';
+import Divider from './components/Divider';
 import StepOnePage from './pages/StepOnePage';
 import StepTwoPage from './pages/StepTwoPage';
 
@@ -102,20 +104,55 @@ class App extends PureComponent {
             selectVm={this.selectVm}
           />
         ) : (
-          'Загрузка данных'
+          <Loader />
         );
     }
 
     return (
       <div className="stepper-app">
-        <TabsList tabs={this.tabs} activeTab={activeTab} />
+        <div className="stepper-app__tabs">
+          <TabsList tabs={this.tabs} activeTab={activeTab} />
+        </div>
 
-        {CurrentStep}
+        <Divider />
+
+        <div className="stepper-app__page">{CurrentStep}</div>
 
         {/* language=SCSS */}
         <style jsx>
           {`
             .stepper-app {
+              width: 100%;
+              max-width: 960px;
+              height: 100%;
+              max-height: 768px;
+              min-height: 384px;
+              margin: 0 auto;
+              display: flex;
+              flex-direction: column;
+              flex-wrap: nowrap;
+              justify-content: stretch;
+
+              &__tabs {
+                min-height: 70px;
+              }
+
+              &__page {
+                width: 100%;
+                margin-top: 10px;
+                padding: 0 5px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                @media screen and (min-width: 480px) {
+                  padding: 0 20px;
+                }
+              }
+
+              @media screen and (min-width: 480px) {
+                border: 5px solid #3d82ff;
+              }
             }
           `}
         </style>

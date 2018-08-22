@@ -39,8 +39,36 @@ class Button extends Component {
         onClick={this.handlePressButton}
         onKeyPress={this.handlePressButton}
         tabIndex={0}
+        className="button"
       >
         {children}
+
+        {/* language=SCSS */}
+        <style jsx>
+          {`
+            .button {
+              width: 80px;
+              height: 35px;
+              color: white;
+              background-color: #57c457;
+              outline: none;
+              border: 1px solid green;
+              border-radius: 3px;
+              cursor: pointer;
+
+              &:hover,
+              &:focus {
+                outline: 0;
+                outline: none;
+                background-color: #5dd65d;
+              }
+
+              &:active {
+                background-color: #54ae54;
+              }
+            }
+          `}
+        </style>
       </button>
     );
   }

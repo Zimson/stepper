@@ -16,13 +16,29 @@ class TabsList extends PureComponent {
     const { activeTab, tabs } = this.props;
 
     return (
-      <ul>
+      <ul className="tab-list">
         {/* non-dynamic list, unique key not important */}
         {tabs.map((tab, id) => (
           <Tab key={id} isActive={activeTab === id}>
             {id + 1}. {tab}
           </Tab>
         ))}
+
+        {/* language=SCSS */}
+        <style jsx>
+          {`
+            .tab-list {
+              width: 98%;
+              margin: 0 auto;
+              display: flex;
+              flex-wrap: nowrap;
+              justify-content: stretch;
+              align-items: flex-end;
+              min-height: 70px;
+              list-style-type: none;
+            }
+          `}
+        </style>
       </ul>
     );
   }

@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import SearchInput from '../../components/SearchInput';
 import Button from '../../components/Button';
 import VmList from '../../components/VmList';
+import Divider from '../../components/Divider/Divider';
 
 const propTypes = {
   snapshots: PropTypes.arrayOf(
@@ -45,12 +46,25 @@ class StepOnePage extends PureComponent {
           switchPage={switchPage}
         />
 
-        <Button onClick={switchPage(1)} title="Возврат">
-          Выбрать
-        </Button>
+        <Divider />
+
+        <div className="button-container">
+          <Button onClick={switchPage(1)} title="Возврат">
+            Выбрать
+          </Button>
+        </div>
 
         {/* language=SCSS */}
-        <style jsx>{``}</style>
+        <style jsx>
+          {`
+            .button-container {
+              flex: 0 0 auto;
+              margin-bottom: 20px;
+              display: flex;
+              justify-content: center;
+            }
+          `}
+        </style>
       </Fragment>
     );
   }

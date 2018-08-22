@@ -19,11 +19,21 @@ const Tab = ({ children, isActive }) => {
       <style jsx>
         {`
           .tab {
+            min-height: 40px;
+            text-transform: uppercase;
+            margin-left: 10px;
             opacity: 0.4;
             color: #3b3b3b;
+            font-size: 1.075rem;
+            padding: 0 2%;
 
             &--active {
               opacity: 1;
+              border-bottom: 2px green solid;
+            }
+
+            @media screen and (min-width: 480px) {
+              font-size: 0.875rem;
             }
           }
         `}

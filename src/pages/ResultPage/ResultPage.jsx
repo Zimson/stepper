@@ -27,7 +27,7 @@ const ResultPage = ({ resultVm, switchPage }) => (
     </Button>
 
     {/* language=SCSS */}
-    <style jsx>{``}</style>
+    {/*<style jsx>{``}</style>*/}
   </Fragment>
 );
 
