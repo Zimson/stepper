@@ -1,154 +1,154 @@
 {
   "snapshots": [
     {
-      "name": "Cisco ASA",
       "id": "cmi-38BC49D0",
-      "startStatus": false,
-      "size": 100
+      "name": "Cisco ASA",
+      "size": 0,
+      "startStatus": false
     },
     {
       "name": "Windows Server 2012 R2",
       "id": "cmi-8BC73BA3",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "Windows Server 2016",
       "id": "cmi-FDD742A2",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "Windows Server 2008 R2 DC (Updated 06.06.18)",
       "id": "cmi-21BC1032",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "Windows Server 2016 DC (Updated 06.06.18)",
       "id": "cmi-B4ADC5D8",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "Windows Server 2012 R2 DC (Updated 06.06.18)",
       "id": "cmi-1A973AB4",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "Cloud Backup Server",
       "id": "cmi-A09B6E08",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "Ubuntu 16.04 [Cloud Images]",
       "id": "cmi-22489FC1",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "CentOS 7.2 [Cloud Images]",
       "id": "cmi-6C914150",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "CentOS 7.4 [Cloud Images]",
       "id": "cmi-298D584C",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "Ubuntu 14.04 [Cloud Images]",
       "id": "cmi-60F938B3",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "Fedora 27 [Cloud Images]",
       "id": "cmi-9A41F7F9",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "CentOS 6.9 [Cloud Images]",
       "id": "cmi-9743CDD1",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "Debian 8 [Cloud Images]",
       "id": "cmi-4873AB57",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "Debian 9 [Cloud Images]",
       "id": "cmi-DBCE9464",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "bitnami-lampstack-7.1.13-1",
       "id": "cmi-6DBF556A",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "bitnami-gitlab-10.4.0-0",
       "id": "cmi-2DF5388D",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "bitnami-joomla-3.8.3-0",
       "id": "cmi-120D654A",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "bitnami-redmine-3.4.4-1",
       "id": "cmi-9AE8CA0C",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "bitnami-wordpress-4.9.2-0",
       "id": "cmi-3965B706",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "debian-9.3-sphinx",
       "id": "cmi-0E667BFD",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "CentOS-7-x86_64",
       "id": "cmi-4D50CC77",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "CentOS-6-x86_64",
       "id": "cmi-866E104E",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "2012R2 Standard",
       "id": "cmi-89D1A910",
       "startStatus": false,
-      "size": 100
+      "size": 0
     },
     {
       "name": "Windows Server 2012 Update 1",
       "id": "cmi-7701526C",
       "startStatus": false,
-      "size": 100
+      "size": 0
     }
   ]
 }
