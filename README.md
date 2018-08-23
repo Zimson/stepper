@@ -5,8 +5,3 @@ Start:
 $ npm i 
 $ npm start
 ```
-
-Build: 
-```bash
-$ npm run build
-```
