@@ -48,6 +48,8 @@ class StepTwoPage extends PureComponent {
   handleSubmit = event => {
     event.preventDefault();
 
+    if (this.state.isSubmit) return;
+
     const validatedFields = Object.keys(this.inputs)
       .map(key => {
         const { value, required } = this.inputs[key].refInput;
