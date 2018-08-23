@@ -33,7 +33,7 @@ const Tab = ({ children, isActive }) => {
             }
 
             @media screen and (min-width: 480px) {
-              font-size: 0.875rem;
+              font-size: 0.8rem;
             }
           }
         `}

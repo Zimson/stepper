@@ -67,18 +67,10 @@ class VmItem extends PureComponent {
               }
 
               &__id {
-                min-width: 43%;
+                min-width: 110px;
 
-                @media screen and (min-width: 420px) {
-                  min-width: 30%;
-                }
-
-                @media screen and (min-width: 510px) {
-                  min-width: 25%;
-                }
-
-                @media screen and (min-width: 720px) {
-                  min-width: 18%;
+                @media screen and (min-width: 520px) {
+                  min-width: 140px;
                 }
               }
             }

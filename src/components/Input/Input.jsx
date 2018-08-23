@@ -17,7 +17,7 @@ const propTypes = {
 
 const defaultProps = {
   type: 'text',
-  label: 'Описание',
+  label: 'Описание:',
   value: '',
   isError: false,
   required: false,
@@ -71,7 +71,9 @@ class Input extends PureComponent {
 
     return (
       <div className={`form-input ${disabled ? 'form-input--disabled' : ''}`}>
-        <label htmlFor={this.inputId}>{label}</label>
+        <label className="input-label" htmlFor={this.inputId}>
+          {label}
+        </label>
         <input
           name={name}
           type={type}
@@ -90,7 +92,40 @@ class Input extends PureComponent {
         <style jsx>
           {`
             .form-input {
+              width: 100%;
+              display: flex;
+              font-size: 1.3rem;
+              color: #525252;
+              min-height: 35px;
+              justify-content: stretch;
+              align-items: center;
+              flex-wrap: wrap;
+              margin-bottom: 10px;
+
+              .input-label {
+                font-size: 1.15rem;
+                min-width: 200px;
+                margin-bottom: 5px;
+                color: #a0a0a0;
+              }
+
               .input {
+                width: 100%;
+                min-height: 40px;
+                padding: 0 5px;
+                border-radius: 3px;
+                border: 1px solid lightgray;
+
+                &:hover {
+                  cursor: pointer;
+                }
+
+                &:focus {
+                  outline: none;
+                  outline: 0;
+                  border: 1px #393939 solid;
+                }
+
                 &--with-error {
                   background-color: pink;
                 }
@@ -99,6 +134,15 @@ class Input extends PureComponent {
               &--disabled {
                 opacity: 0.7;
                 pointer-events: none;
+              }
+
+              @media screen and (min-width: 480px) {
+                flex-wrap: nowrap;
+                margin-bottom: 20px;
+
+                &__label {
+                  font-size: 1rem;
+                }
               }
             }
           `}

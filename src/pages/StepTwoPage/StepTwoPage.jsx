@@ -88,6 +88,7 @@ class StepTwoPage extends PureComponent {
           <form
             onSubmit={this.handleSubmit}
             ref={form => (this.form = form)}
+            className="form"
             noValidate
           >
             <InfoField disabled={isSubmit}>{id}</InfoField>
@@ -101,7 +102,7 @@ class StepTwoPage extends PureComponent {
             <Input
               name="diskSize"
               type="number"
-              label="Размер диска"
+              label="Размер диска:"
               value={size < 1 ? '' : size.toString()}
               ref={sizeInput => (this.inputs.sizeInput = sizeInput)}
               placeholder="100"
@@ -113,21 +114,45 @@ class StepTwoPage extends PureComponent {
               checked={startStatus}
               disabled={isSubmit}
             />
-            <Button
-              title="Назад"
-              onClick={this.props.switchPage(0)}
-              disabled={isSubmit}
-            >
-              Назад
-            </Button>
-            <Button
-              type="submit"
-              title="Создать"
-              onClick={() => {}}
-              disabled={isSubmit}
-            >
-              Создать
-            </Button>
+
+            <div className="group-button">
+              <Button
+                title="Назад"
+                onClick={this.props.switchPage(0)}
+                disabled={isSubmit}
+              >
+                Назад
+              </Button>
+              <Button
+                type="submit"
+                title="Создать"
+                onClick={() => {}}
+                disabled={isSubmit}
+              >
+                Создать
+              </Button>
+            </div>
+
+            {/* language=SCSS */}
+            <style jsx>
+              {`
+                .form {
+                  width: 95%;
+                  max-width: 595px;
+                  margin: 0 auto;
+                  display: flex;
+                  flex-direction: column;
+
+                  .group-button {
+                    min-width: 180px;
+                    margin: 0 auto;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: nowrap;
+                  }
+                }
+              `}
+            </style>
           </form>
         ) : (
           <ResultPage switchPage={this.props.switchPage} resultVm={updatedVm} />
