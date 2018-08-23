@@ -42,7 +42,7 @@ class VmList extends PureComponent {
         <style jsx>
           {`
             .vm-list {
-              max-height: 60%;
+              min-height: 280px;
               overflow: hidden;
               overflow-y: scroll;
               margin-bottom: 20px;

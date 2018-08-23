@@ -61,7 +61,7 @@ class App extends PureComponent {
     });
   };
 
-  selectVm = vmId => () => {
+  selectVm = (vmId, mode) => () => {
     const { snapshots: currentSnapshotList } = this.state;
 
     const selectedItem = currentSnapshotList.findIndex(vm => vm.id === vmId);
