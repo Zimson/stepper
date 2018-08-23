@@ -61,10 +61,29 @@ class App extends PureComponent {
     });
   };
 
+  /*
+  * @todo add scrollIntoView for scroll by arrow, prevent default behavior
+  * */
   selectVm = (vmId, mode) => () => {
     const { snapshots: currentSnapshotList } = this.state;
+    const currentItem = currentSnapshotList.findIndex(vm => vm.id === vmId);
+    let selectedItem = this.state.selectedItem;
 
-    const selectedItem = currentSnapshotList.findIndex(vm => vm.id === vmId);
+    switch (mode) {
+      case 'down':
+        selectedItem =
+          currentItem < currentSnapshotList.length - 1
+            ? currentItem + 1
+            : selectedItem;
+        break;
+
+      case 'up':
+        selectedItem = !currentItem ? currentItem : currentItem - 1;
+        break;
+
+      default:
+        selectedItem = currentItem;
+    }
 
     this.setState({
       ...this.state,

@@ -1,6 +1,9 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
+// utils & config
+import APP_CONFIG from '../../APP_CONFIG';
+
 const propTypes = {
   vmInfo: PropTypes.shape({
     id: PropTypes.string,
@@ -53,13 +56,14 @@ class VmItem extends PureComponent {
               align-items: center;
               font-size: 0.9rem;
 
-              &--selected,
-              &:focus {
+              &--selected {
                 border: 2px solid #00c000;
               }
 
               &:focus {
                 outline: none;
+                outline: 0;
+                background-color: #e8e8e8;
               }
 
               &:hover {

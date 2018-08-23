@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 // components
 import VmItem from '../VmItem';
+import APP_CONFIG from '../../APP_CONFIG';
 
 const propTypes = {
   snapshots: PropTypes.arrayOf(
@@ -19,11 +20,25 @@ const propTypes = {
 const defaultProps = {};
 
 class VmList extends PureComponent {
+  handleKeyDown = event => {
+    const { keyCode } = event;
+    const { snapshots, selectedItem } = this.props;
+    const vmId = snapshots[selectedItem].id;
+
+    if (keyCode === 38) {
+      this.props.selectVm(vmId, 'up')();
+    }
+
+    if (keyCode === 40) {
+      this.props.selectVm(vmId, 'down')();
+    }
+  };
+
   render() {
     const { snapshots, selectVm, selectedItem, switchPage } = this.props;
 
     return (
-      <div className="vm-list">
+      <div className="vm-list" onKeyDown={this.handleKeyDown}>
         {snapshots.length ? (
           snapshots.map((vm, idx) => (
             <VmItem
