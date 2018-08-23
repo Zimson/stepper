@@ -4,4 +4,5 @@ export default {
     UP: 38,
     DOWN: 40,
   },
+  INPUT_TYPES: ['text', 'number'],
 };

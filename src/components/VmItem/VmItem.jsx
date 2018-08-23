@@ -63,6 +63,7 @@ class VmItem extends PureComponent {
               }
 
               &:hover {
+                background-color: #d9d9d9;
                 cursor: pointer;
               }
 

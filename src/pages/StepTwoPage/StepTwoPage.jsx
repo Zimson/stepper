@@ -8,6 +8,9 @@ import Input from '../../components/Input';
 import Checkbox from '../../components/Checkbox';
 import InfoField from '../../components/InfoField';
 
+// utils & config
+import APP_CONFIG from '../../APP_CONFIG';
+
 const propTypes = {
   switchPage: PropTypes.func.isRequired,
   updateVm: PropTypes.func.isRequired,
@@ -33,6 +36,14 @@ class StepTwoPage extends PureComponent {
     isSubmit: false,
     updatedVm: {},
   };
+
+  componentDidMount() {
+    const firstElement = this.form.elements[0];
+
+    if (APP_CONFIG.INPUT_TYPES.some(type => type === firstElement.type)) {
+      firstElement.focus();
+    }
+  }
 
   handleSubmit = event => {
     event.preventDefault();

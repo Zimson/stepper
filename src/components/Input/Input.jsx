@@ -94,7 +94,6 @@ class Input extends PureComponent {
             .form-input {
               width: 100%;
               display: flex;
-              font-size: 1.3rem;
               color: #525252;
               min-height: 35px;
               justify-content: stretch;
@@ -107,6 +106,7 @@ class Input extends PureComponent {
                 min-width: 200px;
                 margin-bottom: 5px;
                 color: #a0a0a0;
+                cursor: pointer;
               }
 
               .input {
@@ -115,10 +115,7 @@ class Input extends PureComponent {
                 padding: 0 5px;
                 border-radius: 3px;
                 border: 1px solid lightgray;
-
-                &:hover {
-                  cursor: pointer;
-                }
+                font-size: 1rem;
 
                 &:focus {
                   outline: none;

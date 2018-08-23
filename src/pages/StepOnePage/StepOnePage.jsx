@@ -59,7 +59,8 @@ class StepOnePage extends PureComponent {
           {`
             .button-container {
               flex: 0 0 auto;
-              margin-bottom: 20px;
+              margin-top: 20px;
+              margin-bottom: 10px;
               display: flex;
               justify-content: center;
             }

@@ -126,7 +126,7 @@ class App extends PureComponent {
               max-width: 960px;
               height: 100%;
               max-height: 768px;
-              min-height: 384px;
+              min-height: 370px;
               margin: 0 auto;
               display: flex;
               flex-direction: column;

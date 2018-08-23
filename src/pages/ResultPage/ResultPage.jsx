@@ -17,18 +17,41 @@ const propTypes = {
 const defaultProps = {};
 
 const ResultPage = ({ resultVm, switchPage }) => (
-  <Fragment>
+  <div className="result-container">
     <h1>Успешно создана виртуальная машина</h1>
 
     <pre>{JSON.stringify(resultVm, null, 2)}</pre>
 
-    <Button title="Назад" onClick={switchPage(0)}>
-      Назад
-    </Button>
+    <div className="button-container">
+      <Button title="Назад" onClick={switchPage(0)}>
+        Назад
+      </Button>
+    </div>
 
     {/* language=SCSS */}
-    {/*<style jsx>{``}</style>*/}
-  </Fragment>
+    <style jsx>
+      {`
+        .result-container {
+          width: 100%;
+          max-width: 630px;
+          margin: 0 auto;
+          display: flex;
+          flex-direction: column;
+
+          pre {
+            margin: 20px 0;
+          }
+
+          .button-container {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+          }
+        }
+      `}
+    </style>
+  </div>
 );
 
 ResultPage.propTypes = propTypes;

@@ -28,12 +28,13 @@ class Input extends PureComponent {
   };
 
   onChange = event => {
-    if (
-      event.type === 'change' ||
-      (event.type === 'keypress' && event.key === 'Enter')
-    ) {
-      event.preventDefault();
+    const isEnter = event.type === 'keypress' && event.key === 'Enter';
 
+    if (isEnter) {
+      event.preventDefault();
+    }
+
+    if (event.type === 'change' || isEnter) {
       this.setState({
         checked: !this.state.checked,
       });
@@ -79,6 +80,7 @@ class Input extends PureComponent {
                 font-size: 1.15rem;
                 min-width: 200px;
                 color: #a0a0a0;
+                cursor: pointer;
               }
 
               &--disabled {
